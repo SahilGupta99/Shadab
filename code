@@ -1,0 +1,141 @@
+    document.addEventListener("DOMContentLoaded", function () {
+        const cardData = [
+            {
+                img: "/static/image.jpg",
+                title: '"A" Frame',
+                description: "One of the most popular designs in the world, our A shape is popular amongst the resorts & farm houses.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Alpine Villa",
+                description: "Something different and dynamic design with options of 1 & 2 BHK suitable for farm houses, holiday homes, etc.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Barn House",
+                description: "Typical barn house concept with option of spacious 1/2/3 BHK suitable for farm houses, holiday homes, resorts etc.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: '"A" Frame',
+                description: "One of the most popular designs in the world, our A shape is popular amongst the resorts & farm houses.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Alpine Villa",
+                description: "Something different and dynamic design with options of 1 & 2 BHK suitable for farm houses, holiday homes, etc.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Barn House",
+                description: "Typical barn house concept with option of spacious 1/2/3 BHK suitable for farm houses, holiday homes, resorts etc.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Barn House",
+                description: "Typical barn house concept with option of spacious 1/2/3 BHK suitable for farm houses, holiday homes, resorts etc.",
+            }
+            
+        ];
+    
+        const cardContainer = document.getElementById("card-container");
+        cardContainer.classList.add(
+            "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3",  // 🔥 3 columns on large screens
+            "gap-8",  // Space between cards
+            "max-w-full", "mx-auto", "p-6"
+        );
+    
+        cardData.forEach(card => {
+            const cardElement = document.createElement("div");
+            cardElement.classList.add(
+                "bg-white", "shadow-lg", "rounded-xl", "overflow-hidden",
+                "w-full", "h-[600px]", "p-6"  // 🔥 Cards stretch to full width of column
+            );
+    
+            cardElement.innerHTML = `
+                <img src="${card.img}" alt="${card.title}" class="w-full h-[80%] object-cover rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-1">${card.title}</h2>
+                    <p class="text-lg text-gray-700">${card.description}</p>
+                </div>
+            `;
+    
+            cardContainer.appendChild(cardElement);
+        });
+    });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const cardData = [
+            {
+                img: "/static/image.jpg",
+                title: '"A" Frame',
+                description: "One of the most popular designs in the world, our A shape is popular amongst the resorts & farm houses.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Alpine Villa",
+                description: "Something different and dynamic design with options of 1 & 2 BHK suitable for farm houses, holiday homes, etc.",
+            },
+            {
+                img: "/static/image.jpg",
+                title: "Barn House",
+                description: "Typical barn house concept with option of spacious 1/2/3 BHK suitable for farm houses, holiday homes, resorts etc.",
+            }
+        ];
+    
+        const cardContainer = document.getElementById("card-container");
+    
+        // 🔥 Create Heading
+        const heading = document.createElement("h2");
+        heading.textContent = "Modern Designs";
+        heading.classList.add(
+            "text-4xl", "md:text-5xl", "font-extrabold", 
+            "text-center", "text-gray-800", "mb-12",
+            "uppercase", "tracking-wide", "font-serif"
+        );
+    
+        // Insert heading before the cards
+        cardContainer.parentNode.insertBefore(heading, cardContainer);
+    
+        // 🔥 Grid Layout for Cards
+        cardContainer.classList.add(
+            "grid", "grid-cols-1", "sm:grid-cols-2", "lg:grid-cols-3",  
+            "gap-8", "max-w-full", "mx-auto", "p-6"
+        );
+    
+        cardData.forEach(card => {
+            const cardElement = document.createElement("div");
+            cardElement.classList.add(
+                "bg-white", "shadow-lg", "rounded-xl", "overflow-hidden",
+                "w-full", "h-[600px]", "p-6", "transition-transform", "hover:scale-105", "duration-300"
+            );
+    
+            cardElement.innerHTML = `
+                <img src="${card.img}" alt="${card.title}" class="w-full h-[60%] object-cover rounded-lg">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-4">${card.title}</h2>
+                    <p class="text-lg text-gray-700">${card.description}</p>
+                </div>
+            `;
+    
+            cardContainer.appendChild(cardElement);
+        });
+    });
+    

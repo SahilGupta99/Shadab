@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Slider</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .swiper {
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 300px;
+            /* Adjust as needed */
+            margin: 0 auto;
+            /* Center the card */
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .profile-info strong {
+            font-size: 1.1em;
+        }
+
+        .profile-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stars {
+            color: #FFA500;
+            font-size: 1.2em;
+        }
+
+        .separator {
+            border-top: 1px solid #ddd;
+            margin: 10px 0;
+        }
+
+        .review {
+            font-size: 0.95em;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Ensure no extra space on the sides */
+        .swiper-container {
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            padding-left: 0;
+            /* Remove extra space on the left */
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Client’s Feedbacks</h4>
+    <h2>Amazing Feedback Say About Services</h2>
+
+    <div class="swiper testimonial-slider">
+        <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Alex" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Alex Doremon</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="testimonial-card">
+                    <div class="profile-section">
+                        <img src="static/images/person.jpg" alt="Richard" class="profile-img">
+                        <div class="profile-info">
+                            <strong>Richard Michael</strong>
+                            <p>Manager, IIT Docs</p>
+                        </div>
+                        <div class="rating-section">
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                    <p class="review">We engaged with Bizan to help us navigate a challenging period of growth and
+                        expansion. Their team provided invaluable insights, strategic guidance.</p>
+                </div>
+            </div>
+
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+
+    <script>
+        var swiper = new Swiper(".testimonial-slider", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: "auto", // Adjust dynamically based on card width
+            spaceBetween: 20,
+            slidesOffsetBefore: 0, // Ensure no extra space before the first slide
+            slidesOffsetAfter: 0, // Ensure no extra space after the last slide
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                1440: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

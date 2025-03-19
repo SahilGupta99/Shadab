@@ -1,0 +1,306 @@
+/* Ensure footer stays at the bottom */
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;
+    /* Pushes the footer to the bottom */
+}
+
+/* #DEV: code for slider careousel */
+/* Reset margin and padding only for the carousel container and its children */
+header,
+.owl-carousel,
+.owl-carousel * {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Preserve spacing for the text content */
+.header-content {
+    padding: 1rem !important;
+    margin: 100px;
+}
+
+.header-content h2,
+.header-content h1,
+.header-content h4 {
+    margin: 0.5rem 0 !important;
+    /* Adjust as needed */
+}
+
+/* Custom CSS for clip-path */
+.clip-polygon {
+    clip-path: polygon(0 0, 60% 0, 36% 100%, 0 100%);
+}
+
+/* Move dots inside the carousel */
+.owl-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.5) !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+.owl-dots .owl-dot.active span {
+    background: #fff !important;
+}
+
+/* Animation for active slides */
+.owl-item.active h1,
+.owl-item.active h2 {
+    animation: fadeInDown 1s both 0.3s;
+}
+
+.owl-item.active h4 {
+    animation: fadeInUp 1s both 0.3s;
+}
+
+.owl-item.active .line {
+    animation: fadeInLeft 1s both 0.3s;
+}
+
+/* Navigation buttons */
+.owl-nav button {
+    position: absolute;
+    top: 43%;
+    opacity: 0;
+    transition: all 0.4s;
+    background: rgba(0, 0, 0, 0.5) !important;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.owl-prev {
+    left: 15px;
+}
+
+.owl-next {
+    right: 15px;
+}
+
+header:hover .owl-prev {
+    left: 0;
+    opacity: 1;
+}
+
+header:hover .owl-next {
+    right: 0;
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------- */
+
+/* styles for scroll progress indicator */
+.progress-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+.progress-container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Circular Progress Bar */
+.progress-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    /* Start from top */
+}
+
+.progress-circle-bg {
+    stroke: #ddd;
+    /* Light gray background */
+    stroke-width: 4;
+    fill: none;
+}
+
+.progress-circle {
+    stroke: black;
+    /* Black progress outline */
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-dasharray: 163.36;
+    /* Full circle length */
+    stroke-dashoffset: 163.36;
+    /* Start empty */
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+/* Text Inside Circle */
+.progress-text {
+    position: absolute;
+    font-size: 14px;
+    /* Smaller text */
+    font-weight: 600;
+    color: black;
+}
+
+.arrow {
+    font-size: 18px;
+    /* Larger arrow */
+    font-weight: 900;
+    height: 20px;
+}
+
+/* #dev code for marquee text */
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+}
+
+.marquee {
+    display: flex;
+    min-width: 200%;
+    animation: scrollText 18s linear infinite;
+}
+
+.marquee span {
+    margin: 0 20px;
+}
+
+/* #DEV: review section styling */
+.swiper {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    /* Adjust as needed */
+    margin: 0 auto;
+    /* Center the card */
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.profile-info strong {
+    font-size: 1.1em;
+}
+
+.profile-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stars {
+    color: #FFA500;
+    font-size: 1.2em;
+}
+
+.separator {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.review {
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.5;
+}
+
+h4 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Ensure no extra space on the sides */
+.swiper-container {
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    padding-left: 0;
+    /* Remove extra space on the left */
+}
